@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Admin";
+}
+
+<h3 class ="col-md-4 col-md-offset-10">@Html.ActionLink("Administrator items", "AdminItems", "Account", routeValues: null, htmlAttributes: new { id = "adminItemsLink" })</h3>
+    <div class="col-md-offset-3 col-md-6">
+        <div id="IdeasOfUser"></div>
+        <div id="IdeasDeletedByUser"></div>
+        <div id="IdeasDeletedByAdmin"></div>
+    </div>
+    <div class="col-md-offset-1 col-md-2">
+        <h3 >All users</h3>
+        <ul id="ListOfUsers" class="list-group"></ul>
+    </div>
+
+<div id="modal_form_admin" class="modal_form">
+    <span id="modal_close_admin" class="modal_close">X</span>
+    <span class="label label-warning">Warning!</span>
+    <div class="text-center marginText">Are you sure you want to remove this idea?</div>
+    <div class="row text-center">
+        <div class="marginButtonYes">
+            <button type="button" id="BtnConfirmDeletion" class="btn btn-default">Yes</button>
+            <button type="button" id="BtnCancelDelition" class="btn btn-default">No</button>
+        </div>              
+    </div>
+</div>
+<div id="overlay_admin" class="overlay"></div>

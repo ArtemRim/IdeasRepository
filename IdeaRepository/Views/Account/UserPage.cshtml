@@ -1,0 +1,34 @@
+﻿@model IdeaRepository.Models.Idea
+
+@{
+    ViewBag.Title = "Ideas repository";
+}
+<div class="col-md-offset-3 col-md-6">
+    <div class="panel panel-default">
+        <div class="panel-heading">Comment</div>
+        <div class="panel-body">
+            @Html.TextAreaFor(model => model.Text, new { id = "text", cols = "69", rows = "7", wrap = "soft | hard" })
+        </div>
+        <div class="panel-footer">
+            <button type="button" id="btnAdd" class="btn btn-default disabled">Add</button>
+            <button type="button" id="btnSave" class="btn btn-default hidden">Save</button>
+            <button type="button" id="btnCancel" class="btn btn-default hidden">Cancel</button>
+        </div>
+    </div>
+</div>
+
+<div id="ListAllIdeas" class="col-md-offset-3 col-md-6">
+</div>
+<div id="modal_form" class="modal_form">
+    <span id="modal_close" class="modal_close">X</span>
+    <span class="label label-warning">Warning!</span>
+    <div class="text-center marginText">Are you sure you want to remove this idea?</div>
+    <div class="row text-center">
+        <div class="marginButtonYes">
+            <button type="button" id="BtnConfirmDelete" class="btn btn-default">Yes</button>
+            <button type="button" id="BtnConfirmCancel" class="btn btn-default">No</button>
+        </div>
+    </div>
+</div>
+<div id="overlay" class="overlay"></div>
+
