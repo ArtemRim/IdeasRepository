@@ -6,7 +6,7 @@ using System.Web;
 using IdeaRepository.Controllers;
 namespace IdeaRepository.Models
 {
-    public class UserDbInitializer : DropCreateDatabaseAlways<IdeasContext>
+    public class UserDbInitializer : CreateDatabaseIfNotExists<IdeasContext>
     {
 
         protected override void Seed(IdeasContext dbcontex)
